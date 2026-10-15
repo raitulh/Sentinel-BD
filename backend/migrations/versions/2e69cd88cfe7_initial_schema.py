@@ -128,6 +128,7 @@ def upgrade() -> None:
     sa.Column('error_message', sa.Text(), nullable=True),
     sa.Column('started_at', sa.DateTime(timezone=True), nullable=True),
     sa.Column('finished_at', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('last_heartbeat_at', sa.DateTime(timezone=True), nullable=True),
     sa.Column('created_at', sa.DateTime(timezone=True), nullable=False),
     sa.ForeignKeyConstraint(['organization_id'], ['organizations.id'], ondelete='CASCADE'),
     sa.ForeignKeyConstraint(['requested_by'], ['users.id'], ondelete='RESTRICT'),

@@ -93,7 +93,7 @@ def scan_video_motion(
 
                     if enable_ai:
                         try:
-                            from backend.app.ai.detector import get_detector
+                            from app.ai.detector import get_detector
                             detector = get_detector()
                             if detector.is_ready:
                                 det_res = detector.detect(frame, conf_threshold=ai_threshold, annotate=False)

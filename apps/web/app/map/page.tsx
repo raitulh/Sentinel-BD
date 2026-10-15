@@ -309,7 +309,7 @@ export default function TacticalMapPage() {
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
                     <h2>Incident Inspector</h2>
-                    {selectedEvent.details?.primary_label && (
+                    {Boolean(selectedEvent.details?.primary_label) && (
                       <span className="badge person">{String(selectedEvent.details.primary_label).toUpperCase()}</span>
                     )}
                   </div>
@@ -318,7 +318,7 @@ export default function TacticalMapPage() {
                 <span className={`status ${selectedEvent.review_status}`}>{selectedEvent.review_status}</span>
               </div>
               <div className="card-body">
-                {selectedEvent.details?.snapshot_ref && (
+                {Boolean(selectedEvent.details?.snapshot_ref) && (
                   <div className="media-box" style={{ marginBottom: 12 }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -334,7 +334,7 @@ export default function TacticalMapPage() {
                     <span>Observation</span>
                     <strong>{selectedEvent.event_type.replaceAll("_", " ")}</strong>
                   </div>
-                  {selectedEvent.details?.primary_label && (
+                  {Boolean(selectedEvent.details?.primary_label) && (
                     <div className="detail-pair">
                       <span>AI Target</span>
                       <strong style={{ color: "#b91c1c" }}>{String(selectedEvent.details.primary_label).toUpperCase()}</strong>

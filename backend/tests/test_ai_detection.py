@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 from pathlib import Path
-from backend.app.ai.detector import YOLOv8Detector, DetectedObject, DetectionResult, get_detector
-from backend.app.services.video_analyzer import MotionObservation, scan_video_motion
+from app.ai.detector import YOLOv8Detector, DetectedObject, DetectionResult, get_detector
+from app.services.video_analyzer import MotionObservation, scan_video_motion
 
 
 def test_yolov8_detector_initialization_and_inference():
