@@ -320,7 +320,6 @@ export default function TacticalMapPage() {
               <div className="card-body">
                 {Boolean(selectedEvent.details?.snapshot_ref) && (
                   <div className="media-box" style={{ marginBottom: 12 }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="snapshot-img"
                       src={`${api.eventSnapshotUrl(selectedEvent.id)}?token=${encodeURIComponent(token || "")}`}

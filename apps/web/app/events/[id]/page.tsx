@@ -67,7 +67,6 @@ export default function EventDetailPage() {
           </div></div>
           <div className="card-body">
             {mediaTab === "snapshot" && hasSnapshot && <div className="media-box">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="snapshot-img" src={`${api.eventSnapshotUrl(eventId)}?token=${encodeURIComponent(token || "")}`} alt="Motion snapshot" />
               <div className="media-actions"><span>Captured at {frameTime !== null ? `${frameTime.toFixed(2)}s` : "event time"}</span>{hasVideo && <button className="button small" onClick={() => { setMediaTab("video"); setTimeout(jumpToMotion, 300); }}><Play size={11} /> Play from this moment</button>}</div>
             </div>}
